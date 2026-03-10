@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CTA Links Page</title>
+  <style>
+    body{
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 100px;
+    }
+    .btn{
+        padding: 12px 24px;
+        margin: 12px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+  </style>
+  <!-- Salesforce Data Cloud SDK (replace YOUR-ACCOUNT-ID) -->
+  <script src="https://cdn.c360a.salesforce.com/beacon/c360a/61dfda57-e818-40e2-a964-6d9b94f21977/scripts/c360a.min.js"></script>
+  <script>
+    SalesforceInteractions.setLoggingLevel('DEBUG');
+    SalesforceInteractions.init({
+      consents:[
+        {
+          status: SalesforceInteractions.ConsentStatus.OptIn,
+          purpose: SalesforceInteractions.ConsentPurpose.Tracking,
+          provider: 'Test Provider'
+        }
+      ]
+    });
+    // No manual event listeners here!
+  </script>
+</head>
+<body>
+
+<h1>Simple CTA Buttons</h1>
+
+<button id="ctaGoogle" class="btn" data-url="#">Go to Google</button>
+<button id="ctaYahoo" class="btn" data-url="https://www.yahoo.com">Go to Yahoo</button>
+<button id="ctaBing" class="btn" data-url="https://www.bing.com">Go to Bing</button>
+
+</body>
+</html>
